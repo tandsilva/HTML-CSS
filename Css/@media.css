@@ -1,0 +1,8 @@
+@media screen  and (max-width:500px)and (orientation:landscape){
+    div{
+        background: color(srgb red);
+        height: 200px;
+        width: 200px;
+    }
+    
+}

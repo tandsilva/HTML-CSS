@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="Digite o nome do contato">
+    <p></p>
+    <p class="p1"></p>
+    <button ondblclick="procurarNome()">Buscar Nome</button>
+
+
+
+</body>
+<script>
+   
+    let p =document.querySelector("p")//pegou do paragrafo lado html
+    let peso = document.querySelector(".p1")
+    let input =document.querySelector('input')
+    const contacts=[
+    {name:'Aldrin',number:'(16)992434197',peso:155},
+    {name:'Jesus',number:'(99)99999999',peso:180},
+    {name:'Aline',number:'(55)77777777',peso:80},
+]
+    function procurarNome(){
+        for (const lista of contacts) {
+          
+            if(input.value.toLowerCase() === lista.name.toLocaleLowerCase()){
+                p.innerHTML = `Contato Encontrado Nome:${lista.name} Tel:${lista.number} `
+                break
+            }else{
+
+               // p.innerHTML ="contato bixado"
+                peso.innerHTML =`muito pesado ${lista.peso} `
+            }
+        }
+        // for(let i=0;i<contacts.length;i++){
+        //     if(input.value.toLowerCase() === contacts[i].name.toLocaleLowerCase()){
+        //         p.innerHTML = `Contato Encontrado Nome:${contacts[i].name} Tel:${contacts[i].number} `
+        //         break
+        //     }else{
+
+        //         p.innerHTML ="contato bixado"
+        //     }
+        }
+
+      
+
+
+
+</script>
+</html>
